@@ -1,0 +1,16 @@
+Gene Name	TestGeneD
+Accession	Refseq:NP_004733
+Domain Number	1
+Domain Type	PDZ
+Interpro ID	IPR001478
+Technique	Phage Display High Valency
+Domain sequence	TESTSEQD
+PeptideName	Peptide	CloneFrequency
+1	VEEL	1
+2	VELE	1
+3	VEEE	1
+4	VLEE	1
+5	VEEE	1
+6	VELE	1
+7	VEEE	1
+8	VEEL	1

@@ -1,0 +1,22 @@
+Gene Name	TestGeneC
+Accession	Refseq:NP_004733
+Domain Number	1
+Domain Type	PDZ
+Interpro ID	IPR001478
+Technique	Phage Display High Valency
+Domain sequence	TESTSEQB
+PeptideName	Peptide	CloneFrequency
+1	DERWWI	1
+2	QSVWWF	1
+3	DQVWWV	1
+4	NLRWWI	1
+5	CCVWWV	1
+6	KFRYWV	1
+7	TEKYWV	1
+8	ALAWWV	1
+9	SDAFWI	1
+10	DGIYFV	1
+11	TEVMWL	1
+12	FGKVWV	1
+13	SRVTWF	1
+14	HEVTWL	1

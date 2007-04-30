@@ -1,0 +1,16 @@
+Gene Name	TestGeneB
+Accession	Refseq:NP_004733
+Domain Number	1
+Domain Type	SH3
+Interpro ID	IPR001478
+Technique	Phage Display High Valency
+Domain sequence	TESTSEQB
+PeptideName	Peptide	CloneFrequency
+1	SRALPPLP	1
+2	SKPLPPLP	1
+3	SRPLPAIP	1
+4	SRPLPALP	1
+5	EKPLPPLP	1
+6	VKQLPRTP	1
+7	VKPLPSPP	1
+8	NKKLPARP	1

@@ -1,0 +1,16 @@
+Gene Name	TestGeneE
+Accession	Refseq:NP_004733
+Domain Number	1
+Domain Type	PDZ
+Interpro ID	IPR001478
+Technique	Phage Display High Valency
+Domain sequence	TESTSEQE
+PeptideName	Peptide	CloneFrequency
+1	MVL	1
+2	MLL	1
+3	MVV	1
+4	MVL	1
+5	MLV	1
+6	MVL	1
+7	MVL	1
+8	MVL	1

@@ -1,0 +1,16 @@
+Gene Name	TestGeneA
+Accession	Refseq:NP_004733
+Domain Number	1
+Domain Type	PDZ
+Interpro ID	IPR001478
+Technique	Phage Display High Valency
+Domain sequence	TESTSEQA
+PeptideName	Peptide	CloneFrequency
+1	KGLRETWL	1
+2	LLGRETWL	1
+3	NREWETWL	1
+4	WMLPETWL	1
+5	GEWYETWL	1
+6	WLGHSTWL	1
+7	LGEKSTWL	1
+8	KDSPSSWV	1
