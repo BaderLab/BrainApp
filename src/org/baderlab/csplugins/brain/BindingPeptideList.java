@@ -264,7 +264,7 @@ public class BindingPeptideList {
             System.out.println("Warning: duplicate peptide name found. It will not be added to the profile. (" + peptideName + ")");
         } else {
             nameToPeptide.put(peptideName, ProteinTools.createProteinSequence(peptideSequence, peptideName));
-            nameToExtIdMap.put(peptideName, new String(externalId));
+            nameToExtIdMap.put(peptideName, externalId);
         }
     }
 
@@ -387,7 +387,9 @@ public class BindingPeptideList {
     }
 
     /**
-     * Wrapper method that first detects the peptide file format and then calls the appropriate reader method.
+     * Detect the format of a peptide file. Accepted formats are represented in the 'fileFormat' enum.
+     * The format is determined by parsing the file and evaluating the size of the header section
+     * and the number of columns in the peptide section, as each format is distinct in these attributes.
      *
      * @param fileName The filename of the peptide list
      * @return true if the read is successful
@@ -439,21 +441,6 @@ public class BindingPeptideList {
         }
     }
 
-    public boolean read(String fileName) throws IOException, IllegalSymbolException {
-
-        fileFormat format = detectFileFormat(fileName);
-        switch (format) {
-            case one_dot_one:
-                return this.readFormat1_1(fileName);
-
-            case one_dot_zero:
-                return this.readFormat1_0(fileName);
-        }
-
-        //this should not happen - format should be one of the fileFormat enum values
-        return false;
-    }
-
     /**
      * Reads a formatted text file (peptide file format version 1.1)
      * containing a peptide list and associated annotation.
@@ -485,6 +472,34 @@ public class BindingPeptideList {
      *
      * @param fileName The filename of the peptide list
      * @return true if read is successful
+     * @throws IOException
+     * @throws IllegalSymbolException
+     */
+    public boolean read(String fileName) throws IOException, IllegalSymbolException {
+
+        //call the appropriate reader based on the detected file format
+        fileFormat format = detectFileFormat(fileName);
+        switch (format) {
+            case one_dot_one:
+                return this.readFormat1_1(fileName);
+
+            case one_dot_zero:
+                return this.readFormat1_0(fileName);
+        }
+
+        //this should not happen - format should be one of the fileFormat enum values
+        return false;
+    }
+
+    /**
+     * Reads a peptide file formatted according to the 1.1 format version.
+     * <p/>
+     * For more information, see <a>BindingPeptideList.read</a>
+     *
+     * @param fileName
+     * @return
+     * @throws IOException
+     * @throws IllegalSymbolException
      */
     private boolean readFormat1_1(String fileName) throws IOException, IllegalSymbolException {
         int lineCount = 0;
