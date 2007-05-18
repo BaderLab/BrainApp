@@ -85,6 +85,9 @@ public class BrainParameterChangeDialog extends JDialog {
     JFormattedTextField fuzzFactorFormattedTextField;
     JTextField biasFileNameTextField;
     JCheckBox uniquePeptidesCheckBox;
+    //Tab 3: Advanced options
+    JCheckBox groupProteinDomains;
+    JComboBox nodeRepComboBox;  // what a node represents (e.g. domain, protein, etc)
 
     /**
      * The actual parameter change dialog that builds the UI
@@ -93,13 +96,14 @@ public class BrainParameterChangeDialog extends JDialog {
      */
     public BrainParameterChangeDialog(Frame parentFrame) {
         super(parentFrame, "Parameters", false);
-        setResizable(false);
+        setResizable(true);
 
         //get the current parameters (get a copy to avoid setting the parameters until user presses OK)
         currentParamsCopy = BrainCurrentParameters.getInstance().getParamsCopy();
 
         //main panel for dialog box
         JPanel panel = new JPanel(new BorderLayout());
+        panel.setSize(500, 800);
 
         //Tab 1: Database selection
         Box databaseBox = Box.createVerticalBox();
@@ -172,10 +176,10 @@ public class BrainParameterChangeDialog extends JDialog {
         if (currentParamsCopy.getSearchParams() != null) {
             int length = currentParamsCopy.getSearchParams().getLength();
             if (length > 0) {
-                lengthFormattedTextField.setText((new Integer(length).toString()));
+                lengthFormattedTextField.setText((Integer.toString(length)));
             } else {
                 lengthFormattedTextField.setText("5");
-                currentParamsCopy.getSearchParams().setLength(new Integer(5));
+                currentParamsCopy.getSearchParams().setLength(5);
             }
         }
         JLabel lengthLabel = new JLabel("Search Length");
@@ -313,7 +317,7 @@ public class BrainParameterChangeDialog extends JDialog {
                 "This number must be 0 or higher where 0 (p=1.0) is the most stringent threshold\n" +
                 "where the score of the match must be equal to p=1.0 (perfect match).";
         scoreThresholdFormattedTextField.setToolTipText(scoreTipText);
-        scoreThresholdFormattedTextField.setText(new Double(currentParamsCopy.getScoreThreshold()).toString());
+        scoreThresholdFormattedTextField.setText(Double.toString(currentParamsCopy.getScoreThreshold()));
         JLabel scoreThresholdLabel = new JLabel("Score threshold");
         JPanel labelFieldPanel1 = new JPanel() {
             public JToolTip createToolTip() {
@@ -337,7 +341,7 @@ public class BrainParameterChangeDialog extends JDialog {
                 "in terms of number of top hits. More hits than this\n" +
                 "may result if many hits have the same score.\n";
         topHitsFormattedTextField.setToolTipText(topHistTipText);
-        topHitsFormattedTextField.setText(new Double(currentParamsCopy.getNumberTopHits()).toString());
+        topHitsFormattedTextField.setText(Double.toString(currentParamsCopy.getNumberTopHits()));
         JLabel topHistThresholdLabel = new JLabel("Number top hits");
         JPanel labelFieldPanel2 = new JPanel() {
             public JToolTip createToolTip() {
@@ -367,7 +371,7 @@ public class BrainParameterChangeDialog extends JDialog {
                 "will be and the more hits will result.\n" +
                 "(This is the pseudocount number for the profile)";
         fuzzFactorFormattedTextField.setToolTipText(fuzzFactorTipText);
-        fuzzFactorFormattedTextField.setText(new Double(currentParamsCopy.getFuzzFactor()).toString());
+        fuzzFactorFormattedTextField.setText(Double.toString(currentParamsCopy.getFuzzFactor()));
         JLabel fuzzFactorLabel = new JLabel("Fuzz Factor");
         JPanel fuzzFactorLabelFieldPanel = new JPanel() {
             public JToolTip createToolTip() {
@@ -426,11 +430,44 @@ public class BrainParameterChangeDialog extends JDialog {
         tab2Panel.add(biasFileSubPanel);
         profileParamsPanel.add(tab2Panel, BorderLayout.NORTH);
 
+
+        //Tab 3: Advanced options
+        Box advancedBox = Box.createVerticalBox();
+
+        //network options
+        JPanel networkSubPanel = new JPanel(new BorderLayout());
+        networkSubPanel.setBorder(BorderFactory.createTitledBorder("Network Options"));
+
+        //Node representation combo box
+        JLabel nodeRepLabel = new JLabel("Nodes represent");
+        JPanel nodeRepLabelFieldPanel = new JPanel();
+        tipText = "A node in the network can represent a single domain, or a protein with one or more instances of a domain";
+        nodeRepLabelFieldPanel.setToolTipText(tipText);
+        nodeRepLabelFieldPanel.add(nodeRepLabel);
+        String[] nodeRepChoices = {"Proteins","Domains"};
+        nodeRepComboBox = new JComboBox(nodeRepChoices);
+        nodeRepComboBox.setToolTipText(tipText);
+        //set default value
+        if (currentParamsCopy.getUniqueQueryProteinNodes()) {
+            nodeRepComboBox.setSelectedIndex(0);
+        } else {
+            nodeRepComboBox.setSelectedIndex(1);
+        }
+        nodeRepLabelFieldPanel.add(nodeRepComboBox);
+        nodeRepComboBox.addActionListener(new selectNodeRepAction());
+        networkSubPanel.add(nodeRepLabelFieldPanel, BorderLayout.CENTER);
+
+        //put Tabl 3 together
+        advancedBox.add(networkSubPanel);
+        advancedBox.add(Box.createRigidArea(new Dimension(0, 225)));
+
+
         //create the tabbed pane
         JTabbedPane tabbedPane = new JTabbedPane();
         //TODO: add a first, default tab that just has basic instructions for the use of the rest of the tabs
         tabbedPane.addTab("Sequence Database", null, databaseBox, "Choose the protein sequence database to search.");
         tabbedPane.addTab("Profile Search", null, profileParamsPanel, "Set parameters for profile search.");
+        tabbedPane.addTab("Advanced Options", null, advancedBox, "Set advanced options.");
         panel.add(tabbedPane, BorderLayout.CENTER);
 
         //create the bottom panel
@@ -686,7 +723,7 @@ public class BrainParameterChangeDialog extends JDialog {
 
         //any change that is made is handled the same - parameter is updated
         private void handleChange() {
-            String value = (String) databaseFileNameTextField.getText();
+            String value = databaseFileNameTextField.getText();
             if (value != null) {
                 File file = new File(value);
                 currentParamsCopy.setDatabaseFileName(file);
@@ -721,7 +758,7 @@ public class BrainParameterChangeDialog extends JDialog {
 
         //any change that is made is handled the same - parameter is updated
         private void handleChange() {
-            String value = (String) profileFileNameTextField.getText();
+            String value = profileFileNameTextField.getText();
             if (value != null) {
                 File file = new File(value);
                 currentParamsCopy.setProfileFileName(file);
@@ -756,7 +793,7 @@ public class BrainParameterChangeDialog extends JDialog {
 
         //any change that is made is handled the same - parameter is updated
         private void handleChange() {
-            String value = (String) biasFileNameTextField.getText();
+            String value = biasFileNameTextField.getText();
             if (value != null) {
                 File file = new File(value);
                 currentParamsCopy.setCodonBiasFileName(file);
@@ -792,7 +829,7 @@ public class BrainParameterChangeDialog extends JDialog {
                 if ((value != null) && (value.intValue() > 0)) {
                     ProteinDatabaseSearchParams params = currentParamsCopy.getSearchParams();
                     if (params != null) {
-                        params.setLength(new Integer(value.intValue()));
+                        params.setLength(value.intValue());
                     }
                 }
             } else if (source == scoreThresholdFormattedTextField) {
@@ -813,4 +850,29 @@ public class BrainParameterChangeDialog extends JDialog {
             }
         }
     }
+
+    /**
+     * Handles choosing a node representation setting
+     */
+    private class selectNodeRepAction extends AbstractAction {
+        selectNodeRepAction() {
+            super();
+        }
+
+        public void actionPerformed(ActionEvent event) {
+            if ("comboBoxChanged".equals(event.getActionCommand())) {
+                JComboBox cb = (JComboBox) event.getSource();
+                String nodeRepName = (String) cb.getSelectedItem();
+                if ("proteins".equalsIgnoreCase(nodeRepName)) {
+                    currentParamsCopy.setUniqueQueryProteinNodes(true);
+                }
+                else if ("domains".equalsIgnoreCase(nodeRepName)) {
+                    currentParamsCopy.setUniqueQueryProteinNodes(false);
+                }
+            }
+        }
+    }
+
+    
+
 }
