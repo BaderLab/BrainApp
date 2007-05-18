@@ -75,6 +75,7 @@ public class ProteinProfile {
     private int domainSequenceStart = 0;    //The starting position of the domain sequence in the domain containing protein
     private int domainSequenceStop = 0; // The ending position of the domain sequence in the domain containing protein
     private String comment = null;  // The user-provided text comment on this profile
+    private String proteinName = null; // the name of the protein
 
     private Map sequenceMap = null; //a map of original sequences in the profile (maps sequence name to sequence)
 
@@ -683,6 +684,14 @@ public class ProteinProfile {
 
     public void setComment(String text) {
         this.comment = text;
+    }
+
+    public String getProteinName() {
+        return proteinName;
+    }
+
+    public void setProteinName(String text) {
+        this.proteinName = text;
     }
 
     /**
