@@ -56,6 +56,14 @@ import java.util.*;
  */
 public class CytoscapeUtil {
     static int runNumber = 1;
+    static HashMap queryNameToAccession; // maps profile names to a unique protein ID
+    static HashMap hitNameToAccession;   // maps hit node names to unique protein ID
+    static int nodeCount = 0;
+
+    static {
+        queryNameToAccession = new HashMap();
+        hitNameToAccession = new HashMap();
+    }
 
     /**
      * Add a result set to Cytoscape
@@ -66,11 +74,39 @@ public class CytoscapeUtil {
      */
     public static void addSequenceSearchResultSetToCytoscape(CyNetwork net, ProteinProfile profile,
                                                              SequenceSearchResultSet resultSet, BrainParameterSet params) {
+        String nodeAName = null;
+        String mapKey = null;
+        boolean newNode, newHitNode;
+
+
+        // unique node identifier
+        // TODO - consider using numerical identifier that isn't based on input field values to ensure uniqueness
+
+        // determine if we're creating a new node or grouping this profile's info/results with an existing node
+        newNode = true;
+        if (params.getUniqueQueryProteinNodes()) {
+            mapKey = profile.getProteinReference().getDbid();
+
+            if (queryNameToAccession.containsKey(mapKey)) {
+                newNode = false;
+                nodeAName = (String) queryNameToAccession.get(mapKey);
+            }
+        }
+
+        if (newNode) {
+            ++nodeCount;
+            nodeAName = String.format("n%1$06d", nodeCount);
+            if (params.getUniqueQueryProteinNodes()) {
+                queryNameToAccession.put(mapKey, nodeAName); // add this Accession-nodeId pair to the map
+            }
+
+        }
+
         //create the node to connect to all search results
         //(e.g. the protein that contains the domain that has the binding profile used for the search)
-        CyNode nodeA = Cytoscape.getCyNode(profile.getName());
+        CyNode nodeA = Cytoscape.getCyNode(nodeAName);
         if (nodeA == null || net.getIndex(nodeA) == 0) {
-            nodeA = Cytoscape.getCyNode(profile.getName(), true);
+            nodeA = Cytoscape.getCyNode(nodeAName, true);
             net.addNode(nodeA);
         }
         addPSIFeaturesToNode(net, nodeA, profile);
@@ -81,6 +117,7 @@ public class CytoscapeUtil {
             Sequence originalDBSequence = resultSet.getOriginalSequence(sequence);
             //NODE
             //add the edge to the network
+            /* mdharsee 20070510 - replaced with new node naming scheme
             if (params.getDatabaseFormat().equalsIgnoreCase("genpept")) {
                 nodeBName = findNameInGenPeptSequence(originalDBSequence);
                 if (nodeBName == null) {
@@ -91,6 +128,19 @@ public class CytoscapeUtil {
             } else {
                 nodeBName = originalDBSequence.getName();
             }
+            */
+
+            // determine if we're creating a new hit node or grouping this result with an existing node
+            mapKey = originalDBSequence.getName();
+            if (hitNameToAccession.containsKey(mapKey)) {
+                nodeBName = (String) hitNameToAccession.get(mapKey);
+            }
+            else {
+                ++nodeCount;
+                nodeBName = String.format("n%1$06d", nodeCount);
+                hitNameToAccession.put(mapKey, nodeBName);
+            }
+
             CyNode nodeB = Cytoscape.getCyNode(nodeBName);
             if (nodeB == null || net.getIndex(nodeB) == 0) {
                 nodeB = Cytoscape.getCyNode(nodeBName, true);
@@ -101,12 +151,20 @@ public class CytoscapeUtil {
                     "_pp_" + nodeB.getIdentifier(), nodeB.getIdentifier(), "pp" +
                     /*to force uniqueness of edges so scores can be unique to each network*/
                     net.getIdentifier());
+
+            /* Commented out (mdharsee 2007 May 13) - edges are not to be renamed at this time
+            ++edgeCount;
+            String edgeName = String.format("e%1$06d", edgeCount);
+            edge = Cytoscape.getCyEdge(nodeA.getIdentifier(), edgeName, nodeB.getIdentifier(), "pp");
+            */
+            
             net.addEdge(edge);
             //now add all hits as attributes
             double bestScore = Double.MAX_VALUE;
             String bestMotif = null;
             Hit bestHit = null;
             List hits = resultSet.getHits(sequence);
+            List sequenceList = new ArrayList(); // list of motif hit sequences
             for (int i = 0; i < hits.size(); i++) {
                 Hit hit = (Hit) hits.get(i);
                 //keep track of best score
@@ -115,17 +173,23 @@ public class CytoscapeUtil {
                     bestScore = hit.getScore().doubleValue();
                     bestMotif = hit.getMatchString();
                 }
-                //net.setNodeAttributeValue(nodeB, "Motif Hit", bestMotif);
                 if (bestMotif != null) {
-                    Cytoscape.getNodeAttributes().setAttribute(nodeB.getIdentifier(), "Motif Hit", bestMotif);
+                    //Cytoscape.getNodeAttributes().setAttribute(nodeB.getIdentifier(), "Motif Hit", bestMotif);
                     Cytoscape.getNodeAttributes().setAttribute(nodeB.getIdentifier(), "Motif Start", bestHit.getStart());
                     Cytoscape.getNodeAttributes().setAttribute(nodeB.getIdentifier(), "Motif End", bestHit.getEnd());
                 }
+                sequenceList.add(hit.getMatchString() + " (" + hit.getStart() + "-" + hit.getEnd() + ") by "
+                        + profile.getName() + "; score: " + hit.getScore());
             }
+
+            // add hit sequences as a list attribute
+            Cytoscape.getNodeAttributes().setListAttribute(nodeB.getIdentifier(), "Motif Hit", sequenceList);
+
             //add best score as an edge attribute
             bestScore = truncateDouble(bestScore, 3);
-            //net.setEdgeAttributeValue(edge, "HighestScore", new Double(bestScore));
             Cytoscape.getEdgeAttributes().setAttribute(edge.getIdentifier(), "HighestScore", new Double(bestScore));
+
+            //add GenPept annotation if applicable
             if (params.getDatabaseFormat().equalsIgnoreCase("genpept")) {
                 addPSIFeaturesToEdge(net, edge, bestScore, bestMotif, nodeA.getIdentifier());
             }
@@ -144,6 +208,7 @@ public class CytoscapeUtil {
      * Top-level method to run a profile search and view the results in Cytoscape
      *
      * @param searchResults The search results to add to a Cytoscape network
+     * @param params The set of parameters used for the search
      * @return The network the search results were added to
      */
     public static CyNetwork addProfileSearchResultsToCytoscape(MultiSequenceSearchResultSet searchResults, BrainParameterSet params) {
@@ -152,6 +217,12 @@ public class CytoscapeUtil {
             System.err.println("Search error. Can't continue.");
             return null;
         }
+
+        // this is a new network so reset network-specific stuff
+        queryNameToAccession.clear();
+        hitNameToAccession.clear();
+        nodeCount = 0;
+
         Collection results = searchResults.getAllResultSets();
         for (Iterator iterator = results.iterator(); iterator.hasNext();) {
             SequenceSearchResultSet sequenceSearchResultSet = (SequenceSearchResultSet) iterator.next();
@@ -176,44 +247,76 @@ public class CytoscapeUtil {
      */
     private static void addPSIFeaturesToNode(CyNetwork net, CyNode node, ProteinProfile profile) {
         DatabaseReference protein = profile.getProteinReference();
+        List list = null;
         String[] dbName = new String[1];
         dbName[0] = protein.getDbname();
-        //net.setNodeAttributeValue(node, CommonVocab.XREF_DB_NAME, dbName);
+
         if (dbName[0] != null) {
             Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), (String)CommonVocab.XREF_DB_NAME, dbName[0]);
         }
 
         String[] dbID = new String[1];
         dbID[0] = protein.getDbid();
-        //net.setNodeAttributeValue(node, CommonVocab.XREF_DB_ID, dbID);
         if (dbID[0] != null) {
             Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), CommonVocab.XREF_DB_ID, dbID[0]);
         }
 
         //add profile features to node
-        //net.setNodeAttributeValue(node, "Domain Number", new Integer(profile.getDomainNumber()));
-        Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Domain Number", new Integer(profile.getDomainNumber()));
-        //net.setNodeAttributeValue(node, "Domain Sequence", profile.getDomainSequence());
-        if (profile.getDomainSequence() != null) {
-            Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Domain Sequence", profile.getDomainSequence());
+        if (Cytoscape.getNodeAttributes().hasAttribute(node.getIdentifier(), "Domain Name")) {
+            list = Cytoscape.getNodeAttributes().getListAttribute(node.getIdentifier(), "Domain Name");
+        } else {
+            list = new ArrayList();
         }
-        //net.setNodeAttributeValue(node, "Domain Type", profile.getDomainName());
+        list.add(profile.getName());
+        Cytoscape.getNodeAttributes().setListAttribute(node.getIdentifier(), "Domain Name", list);
+        list.clear();
+
+        if (Cytoscape.getNodeAttributes().hasAttribute(node.getIdentifier(), "Domain Number")) {
+            list = Cytoscape.getNodeAttributes().getListAttribute(node.getIdentifier(), "Domain Number");
+        } else {
+            list = new ArrayList();
+        }
+        list.add(profile.getDomainNumber());
+        Cytoscape.getNodeAttributes().setListAttribute(node.getIdentifier(), "Domain Number", list);
+        list.clear();
+
+        if (profile.getDomainSequence() != null) {
+            if (Cytoscape.getNodeAttributes().hasAttribute(node.getIdentifier(), "Domain Sequence")) {
+                list = Cytoscape.getNodeAttributes().getListAttribute(node.getIdentifier(), "Domain Sequence");
+            } else {
+                list = new ArrayList();
+            }
+            String value = profile.getDomainSequence();
+            // add sequence start/stop positions if defined
+            if ((profile.getDomainSequenceStart() > 0) && (profile.getDomainSequenceStop() > 0)) {
+                value += " (" + profile.getDomainSequenceStart() + "-" + profile.getDomainSequenceStop() + ")";
+            }
+            list.add(value);
+            Cytoscape.getNodeAttributes().setListAttribute(node.getIdentifier(), "Domain Sequence", list);
+            list.clear();
+        }
+
         if (profile.getDomainName() != null) {
             Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Domain Type", profile.getDomainName());
         }
-        //net.setNodeAttributeValue(node, "Experimental Method", profile.getExperimentalMethod());
+
+        if (profile.getName() != null) {
+            Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "GENE_NAME", profile.getProteinName());
+        }
+
         if (profile.getExperimentalMethod() != null) {
             Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Experimental Method", profile.getExperimentalMethod());
         }
-        //net.setNodeAttributeValue(node, "ProfileNumSequences", new Integer(profile.getNumSequences()));
-        Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "ProfileNumSequences", new Integer(profile.getNumSequences()));
 
-        if (profile.getDomainSequenceStart() != 0) {
-            Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Sequence Start", profile.getDomainSequenceStart());
+        if (Cytoscape.getNodeAttributes().hasAttribute(node.getIdentifier(), "ProfileNumSequences")) {
+            list = Cytoscape.getNodeAttributes().getListAttribute(node.getIdentifier(), "ProfileNumSequences");
+        } else {
+            list = new ArrayList();
         }
-        if (profile.getDomainSequenceStop() != 0) {
-            Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Sequence Stop", profile.getDomainSequenceStop());
-        }
+        list.add(profile.getNumSequences());
+        Cytoscape.getNodeAttributes().setListAttribute(node.getIdentifier(), "ProfileNumSequences", list);
+        list.clear();
+
         if (profile.getComment() != null) {
             Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "Comment", profile.getComment());
         }
@@ -454,7 +557,16 @@ public class CytoscapeUtil {
                 Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "SNPs (All)", sbAll.toString());
             }
             if (sbMotif != null) {
-                Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "SNPs (Motif Hit)", sbMotif.toString());
+                List list = null;
+                // get the node's current motif SNP list attribute if there is one, otherwise create a new list
+                if (Cytoscape.getNodeAttributes().hasAttribute(node.getIdentifier(), "SNPs (Motif Hit)")) {
+                    list = Cytoscape.getNodeAttributes().getListAttribute(node.getIdentifier(), "SNPs (Motif Hit)");
+                } else {
+                    list = new ArrayList();
+                }
+                list.add(sbMotif.toString());
+                Cytoscape.getNodeAttributes().setListAttribute(node.getIdentifier(), "SNPs (Motif Hit)", list);
+                //Cytoscape.getNodeAttributes().setAttribute(node.getIdentifier(), "SNPs (Motif Hit)", sbMotif.toString());
             }
         }
     }
