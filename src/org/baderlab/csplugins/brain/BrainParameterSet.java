@@ -62,6 +62,7 @@ public class BrainParameterSet {
     // codon bias specification
     private File codonBiasFileName = null; // file containing codon bias file specification
     private boolean uniquePeptides;
+    private boolean uniqueQueryProteinNodes;
 
     /**
      * Create a new profile search parameter set
@@ -83,7 +84,8 @@ public class BrainParameterSet {
                              double scorePercentageThreshold,
                              int numberTopHits,
                              double fuzzFactor,
-                             boolean uniquePeptides) {
+                             boolean uniquePeptides,
+                             boolean uniqueQueryProteinNodes) {
 
         this.databaseFileName = databaseFileName;
         this.databaseFormat = databaseFormat;
@@ -96,6 +98,7 @@ public class BrainParameterSet {
         this.fuzzFactor = fuzzFactor;
         profileSearch = true;
         this.uniquePeptides = uniquePeptides;
+        this.uniqueQueryProteinNodes = uniqueQueryProteinNodes;
     }
 
     /**
@@ -109,7 +112,9 @@ public class BrainParameterSet {
         this.scorePercentageThreshold = 100.0;
         this.numberTopHits = 20;
         this.fuzzFactor = 1.0;
-        uniquePeptides = true;
+        this.uniquePeptides = true;
+        this.uniqueQueryProteinNodes = false;
+
     }
 
     /**
@@ -120,7 +125,8 @@ public class BrainParameterSet {
     public BrainParameterSet copy() {
         BrainParameterSet newParam = new BrainParameterSet(this.getDatabaseFileName(), this.getDatabaseFormat(),
                 this.getSearchParams().copy(), this.getProfileFile(), this.getCodonBiasFile(), this.getScoreThreshold(),
-                this.getScorePercentageThreshold(), this.getNumberTopHits(), this.getFuzzFactor(), this.getUniquePeptides());
+                this.getScorePercentageThreshold(), this.getNumberTopHits(), this.getFuzzFactor(), this.getUniquePeptides(),
+                this.getUniqueQueryProteinNodes());
         return newParam;
     }
 
@@ -151,6 +157,10 @@ public class BrainParameterSet {
 
     public boolean getUniquePeptides() {
         return uniquePeptides;
+    }
+
+    public boolean getUniqueQueryProteinNodes() {
+        return uniqueQueryProteinNodes;
     }
 
     public double getScorePercentageThreshold() {
@@ -191,6 +201,10 @@ public class BrainParameterSet {
 
     public void setUniquePeptides(boolean value) {
         this.uniquePeptides = value;
+    }
+
+    public void setUniqueQueryProteinNodes(boolean value) {
+        this.uniqueQueryProteinNodes = value;
     }
 
     public void setScorePercentageThreshold(double scorePercentageThreshold) {
@@ -266,6 +280,9 @@ public class BrainParameterSet {
                     ((searchParams.isNormalized()) ? " (Normalized)" : " (Not Normalized)") + lineSep);
             sb.append("Profile Fuzz Factor: " + fuzzFactor + lineSep);
             sb.append("Top " + scorePercentageThreshold + " percent of hits." + lineSep);
+            sb.append("Codon Bias File: " + ((this.codonBiasFileName == null) ? "None" : this.codonBiasFileName));
+            sb.append("Unique Profile Peptides: " + ((this.uniquePeptides) ? "Yes" : "No"));
+            sb.append("Node Representation: " + ((this.uniqueQueryProteinNodes) ? "Proteins" : "Domains"));
         }
         sb.append(searchParams.toString());
         if ((databaseFormat != null) && (databaseFileName != null)) {
