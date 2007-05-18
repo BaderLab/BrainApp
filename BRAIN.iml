@@ -518,6 +518,8 @@
     <orderEntryProperties />
     <javadoc-paths>
       <root url="file://$MODULE_DIR$/.." />
+      <root url="http://chianti.ucsd.edu/Cyto-2_4_0/" />
+      <root url="file:///Applications/Cytoscape_v2.4.0/docs" />
     </javadoc-paths>
   </component>
   <component name="VcsManagerConfiguration">
