@@ -64,7 +64,7 @@ public class BrainAboutDialog extends JDialog {
                 "</P></body></html>");
         */
         editorPane.setText("<html><body><P align=center>BRAIN (Biologically Relevant Analysis of Interaction Networks)<BR>" +
-                "v1.0.3 alpha (April 23, 2007)<BR>" +
+                "v1.0.4 alpha (May 15, 2007)<BR>" +
                 "Author: Gary Bader<BR><BR>\n" +
                 "Bader Lab<BR>\n" +
                 "Terrence Donnelly Centre for Cellular and Biomolecular Research (CCBR)<BR>\n" +
