@@ -437,7 +437,7 @@ public class DomainInteractionAnalysis {
                             ProteinDatabaseSearchParams dbparams = new ProteinDatabaseSearchParams(terminus);
                             dbparams.setNormalized(normalized);
                             BrainParameterSet params = new BrainParameterSet(refProteomeFile, refProteomeFormat,
-                                    dbparams, profileFile, null, threshold, 100.0, top, fuzz, true);
+                                    dbparams, profileFile, null, threshold, 100.0, top, fuzz, true, false);
                             referenceParams.add(params);
                         } else {
                             throw new IllegalArgumentException("#ReferenceProfiles section: expected 6 fields, but found " + lineSplit.length + ": " + line + ".");
