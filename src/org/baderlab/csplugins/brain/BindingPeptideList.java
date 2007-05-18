@@ -413,13 +413,14 @@ public class BindingPeptideList {
             lineSplit = line.split("[\t]");
 
             //if <2 columns, format is invalid
+            /* this does not allow empty field values with no tab character after field name
             if (lineSplit.length < 2) {
                 throw new RuntimeException("Expected two tab-separated columns. Unable to parse header at line " + lineCount +
                         " (Found: " + line + "). Please check the input file: " + fileName);
-            }
+            }*/
 
             //if 2 columns, we're in the header
-            if (lineSplit.length == 2) {
+            if (lineSplit.length <= 2) {
                 ++headerSize;
             }
             //if >2 columns, assume we've reached sequence section
@@ -593,6 +594,9 @@ public class BindingPeptideList {
                 } else if (col1.equalsIgnoreCase("Domain sequence")) {
                     domainSequence = col2;
                 } else if (col1.equalsIgnoreCase("Domain Range")) {
+                    if (col2.length() == 0) {
+                        continue; // value is optional
+                    }
                     // range is given as "start-stop" where start=starting aa position, stop=ending aa position
                     if (col2.indexOf("-") < 0) {
                         throw new RuntimeException("Expected dash-separated Domain Range (e.g. 255-300) " +
