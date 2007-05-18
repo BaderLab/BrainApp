@@ -12,6 +12,7 @@ my $ScriptName = "ConvertBrainPeptideFile.pl";
 my $Debug = 0; 		# set to 1 for verbose debugging output 
 my $Comment = "";	# this string will be inserted in the Comment field
 my $FilesConverted = 0;	# counter - # of files actually converted
+my $TempFile = "convertBrain.tmp";
 
 ##
 # MAIN
@@ -129,36 +130,67 @@ sub ConvertFile() {
 	close(FILEIN);
 
 	##
+	# to deal with unrecognized newlines (e.g. DOS/Windows CR or CR-LF on a UNIX platform) 
+	# convert CRs to newlines  ('\r' -> '\n') and remove duplicate consecutive newlines,
+	# write the data out to a temp file, and read it back in - this is ugly but it works
+	open(TEMPOUT, ">", $TempFile);
+	for (@datain) {
+		tr/\r/\n/s;
+		tr/\n//s;
+		print TEMPOUT;
+	}
+	close(TEMPOUT);
+	open(FILEIN, "<", $TempFile);
+	@datain = <FILEIN>;
+	close(FILEIN);
+	unlink($TempFile) || die "Unable to remove temporary file $TempFile: $!"; 
+
+	##
 	# Convert the file
 	my @dataout = undef;
 	my $lineCount = 0;
 	my $headerChanged = 0;
 	my $isValid = 0;	# set to 1 if it's a valid peptide file
 	for (@datain) {
+		#s/(\r\n|\r|\n)/\n/g; 	# convert DOS newline (CR or CR-LF) to UNIX
+		#s/(\r)/\n/g; 		# convert DOS newline (CR or CR-LF) to UNIX 
+		#tr/\r/\n/s;
+		#tr/\n//s;
+		$lineCount++;
+		if ($Debug) { print "$_"; }
 		@lineSplit = split("\t", $_);
 		$cols = (scalar @lineSplit);
 
 		# ignore comments and blank lines
 		if ((index($_,"#") == 0) || (length($_) < 1)) {
+			if ($Debug == 1) {
+				print "Skipping line $lineCount: $_";
+			}
 			next;
 		}
 		# if 2 columns, insert new fields at end of header 
 		if ($cols == 2) {
+			if ($Debug) { print "HEADER\n"; }
 			# a "valid" peptide file will contain the field "Gene Name" in first of 2 columns
 			# this is a very loose validity check, but will do for now
 			if ($isValid == 0) {
-				if ($lineSplit[0] eq "Gene Name") {
+				if (lc($lineSplit[0]) eq "gene name") {
 					$isValid = 1;
+				}
+				if ($isValid == 0) {
+					print "ERROR: Expected field 'Gene Name' in first column on line $lineCount\n";
+					last;
 				}
 			}
 			push (@dataout, $_);
-			if ($lineSplit[0] eq "Domain Sequence") {
+			if (lc($lineSplit[0]) eq "domain sequence") {
 				push (@dataout, "Domain Range\t\n");
 				push (@dataout, "Comment\t$Comment\n");
 			}
 		}
 		# if 3 columns, replace peptide section column names 
 		elsif ($cols == 3) {
+			if ($Debug) { print "PEPTIDE\n"; }
 			if ($headerChanged == 0) {
 				$header = $_;
 				chomp $header;
@@ -169,6 +201,9 @@ sub ConvertFile() {
 			else {
 				push (@dataout, $_);
 			}
+		}
+		else {
+			print "Unexpected number of columns at line $lineCount: $_\n";
 		}
 	}
 
