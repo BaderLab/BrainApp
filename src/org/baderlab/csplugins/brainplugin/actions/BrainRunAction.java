@@ -1,11 +1,11 @@
-package org.baderlab.csplugins.brain.actions;
+package org.baderlab.csplugins.brainplugin.actions;
 
 import cytoscape.Cytoscape;
 import cytoscape.task.ui.JTaskConfig;
 import cytoscape.task.util.TaskManager;
-import org.baderlab.csplugins.brain.BrainParameterSet;
-import org.baderlab.csplugins.brain.BrainAlgorithm;
-import org.baderlab.csplugins.brain.dialogs.BrainParameterChangeDialog;
+import org.baderlab.csplugins.brainplugin.BrainParameterSet;
+import org.baderlab.csplugins.brainplugin.BrainAlgorithm;
+import org.baderlab.csplugins.brainplugin.dialogs.BrainParameterChangeDialog;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

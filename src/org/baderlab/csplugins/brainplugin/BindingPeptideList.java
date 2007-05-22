@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import org.biojava.bio.BioException;
 import org.biojava.bio.seq.ProteinTools;
@@ -10,7 +10,7 @@ import org.biojava.bio.seq.db.SequenceDB;
 import org.biojava.bio.symbol.IllegalSymbolException;
 import org.biojava.bio.symbol.SymbolList;
 import org.biojava.utils.ChangeVetoException;
-import static org.baderlab.csplugins.brain.BindingPeptideList.fileFormat.*;
+import static org.baderlab.csplugins.brainplugin.BindingPeptideList.fileFormat.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,6 +1,6 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
-import org.baderlab.csplugins.brain.util.FileReaderUtil;
+import org.baderlab.csplugins.brainplugin.util.FileReaderUtil;
 
 import java.awt.*;
 import java.io.File;

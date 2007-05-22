@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import cytoscape.task.TaskMonitor;
 import org.biojava.bio.BioException;

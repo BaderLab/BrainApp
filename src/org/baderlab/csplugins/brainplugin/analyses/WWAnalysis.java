@@ -1,6 +1,6 @@
-package org.baderlab.csplugins.brain.analyses;
+package org.baderlab.csplugins.brainplugin.analyses;
 
-import org.baderlab.csplugins.brain.*;
+import org.baderlab.csplugins.brainplugin.*;
 
 import javax.imageio.ImageIO;
 import java.io.File;

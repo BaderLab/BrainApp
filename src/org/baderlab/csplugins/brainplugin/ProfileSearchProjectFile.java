@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import java.io.BufferedReader;
 import java.io.File;

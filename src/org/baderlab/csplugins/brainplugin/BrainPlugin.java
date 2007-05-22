@@ -1,10 +1,10 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import cytoscape.Cytoscape;
 import cytoscape.plugin.CytoscapePlugin;
-import org.baderlab.csplugins.brain.actions.BrainAboutAction;
-import org.baderlab.csplugins.brain.actions.BrainParameterChangeAction;
-import org.baderlab.csplugins.brain.actions.BrainRunAction;
+import org.baderlab.csplugins.brainplugin.actions.BrainAboutAction;
+import org.baderlab.csplugins.brainplugin.actions.BrainParameterChangeAction;
+import org.baderlab.csplugins.brainplugin.actions.BrainRunAction;
 
 import javax.swing.*;
 

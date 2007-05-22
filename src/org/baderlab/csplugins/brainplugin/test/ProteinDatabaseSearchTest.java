@@ -1,8 +1,8 @@
-package org.baderlab.csplugins.brain.test;
+package org.baderlab.csplugins.brainplugin.test;
 
 import junit.framework.TestCase;
 import org.biojava.bio.BioException;
-import org.baderlab.csplugins.brain.*;
+import org.baderlab.csplugins.brainplugin.*;
 
 import java.io.File;
 import java.io.IOException;

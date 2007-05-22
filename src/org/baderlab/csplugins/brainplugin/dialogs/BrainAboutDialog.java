@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain.dialogs;
+package org.baderlab.csplugins.brainplugin.dialogs;
 
 import javax.swing.*;
 import javax.swing.text.html.HTMLEditorKit;

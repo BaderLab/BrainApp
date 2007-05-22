@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 /**
  * * Copyright (c) 2004 Memorial Sloan-Kettering Cancer Center

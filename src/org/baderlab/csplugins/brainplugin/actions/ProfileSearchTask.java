@@ -1,13 +1,13 @@
-package org.baderlab.csplugins.brain.actions;
+package org.baderlab.csplugins.brainplugin.actions;
 
 import cytoscape.CyNetwork;
 import cytoscape.Cytoscape;
 import cytoscape.CytoscapeInit;
 import cytoscape.task.Task;
 import cytoscape.task.TaskMonitor;
-import org.baderlab.csplugins.brain.CytoscapeUtil;
-import org.baderlab.csplugins.brain.MultiSequenceSearchResultSet;
-import org.baderlab.csplugins.brain.BrainAlgorithm;
+import org.baderlab.csplugins.brainplugin.CytoscapeUtil;
+import org.baderlab.csplugins.brainplugin.MultiSequenceSearchResultSet;
+import org.baderlab.csplugins.brainplugin.BrainAlgorithm;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center

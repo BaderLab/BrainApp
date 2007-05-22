@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import org.biojava.bio.gui.SymbolStyle;
 import org.freehep.graphics2d.VectorGraphics;

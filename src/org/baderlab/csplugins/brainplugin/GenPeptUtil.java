@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import org.biojava.bio.Annotation;
 import org.biojava.bio.seq.Feature;

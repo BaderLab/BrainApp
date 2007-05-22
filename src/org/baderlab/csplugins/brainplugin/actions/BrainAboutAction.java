@@ -1,7 +1,7 @@
-package org.baderlab.csplugins.brain.actions;
+package org.baderlab.csplugins.brainplugin.actions;
 
 import cytoscape.Cytoscape;
-import org.baderlab.csplugins.brain.dialogs.BrainAboutDialog;
+import org.baderlab.csplugins.brainplugin.dialogs.BrainAboutDialog;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

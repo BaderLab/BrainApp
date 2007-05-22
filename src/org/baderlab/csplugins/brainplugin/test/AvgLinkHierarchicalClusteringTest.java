@@ -1,13 +1,13 @@
-package org.baderlab.csplugins.brain.test;
+package org.baderlab.csplugins.brainplugin.test;
 
 import junit.framework.TestCase;
 import org.biojava.bio.BioException;
 import org.biojava.bio.seq.Sequence;
 import org.biojava.bio.seq.SequenceIterator;
 import org.biojava.bio.seq.io.SeqIOTools;
-import org.baderlab.csplugins.brain.AlignedProteinSequenceIdentityDistance;
-import org.baderlab.csplugins.brain.AvgLinkHierarchicalClustering;
-import org.baderlab.csplugins.brain.DistanceMatrix;
+import org.baderlab.csplugins.brainplugin.AlignedProteinSequenceIdentityDistance;
+import org.baderlab.csplugins.brainplugin.AvgLinkHierarchicalClustering;
+import org.baderlab.csplugins.brainplugin.DistanceMatrix;
 
 import java.io.BufferedReader;
 import java.io.File;

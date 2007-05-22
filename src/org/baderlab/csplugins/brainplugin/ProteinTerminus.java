@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import org.biojava.bio.seq.Sequence;
 import org.biojava.bio.seq.impl.SimpleSequence;

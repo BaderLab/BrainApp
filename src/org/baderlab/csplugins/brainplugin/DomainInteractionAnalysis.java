@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import cytoscape.CyEdge;
 import cytoscape.CyNetwork;
@@ -6,7 +6,7 @@ import cytoscape.CyNode;
 import cytoscape.data.CyAttributes;
 import cytoscape.data.CyAttributesImpl;
 import org.biojava.bio.seq.Sequence;
-import org.baderlab.csplugins.brain.inparanoid.InparanoidDB;
+import org.baderlab.csplugins.brainplugin.inparanoid.InparanoidDB;
 
 import java.io.BufferedReader;
 import java.io.File;

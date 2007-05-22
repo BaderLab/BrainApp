@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import cytoscape.CyEdge;
 import cytoscape.CyNetwork;

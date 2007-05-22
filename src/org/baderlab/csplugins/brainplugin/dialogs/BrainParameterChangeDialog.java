@@ -1,11 +1,11 @@
-package org.baderlab.csplugins.brain.dialogs;
+package org.baderlab.csplugins.brainplugin.dialogs;
 
 import cytoscape.util.FileUtil;
-import org.baderlab.csplugins.brain.BrainCurrentParameters;
-import org.baderlab.csplugins.brain.BrainParameterSet;
-import org.baderlab.csplugins.brain.ProteinDatabaseSearchParams;
-import org.baderlab.csplugins.brain.ProteinTerminus;
-import org.baderlab.csplugins.brain.util.JMultiLineToolTip;
+import org.baderlab.csplugins.brainplugin.BrainCurrentParameters;
+import org.baderlab.csplugins.brainplugin.BrainParameterSet;
+import org.baderlab.csplugins.brainplugin.ProteinDatabaseSearchParams;
+import org.baderlab.csplugins.brainplugin.ProteinTerminus;
+import org.baderlab.csplugins.brainplugin.util.JMultiLineToolTip;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;

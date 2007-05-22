@@ -1,6 +1,6 @@
-package org.baderlab.csplugins.brain.inparanoid;
+package org.baderlab.csplugins.brainplugin.inparanoid;
 
-import org.baderlab.csplugins.brain.DatabaseReference;
+import org.baderlab.csplugins.brainplugin.DatabaseReference;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center

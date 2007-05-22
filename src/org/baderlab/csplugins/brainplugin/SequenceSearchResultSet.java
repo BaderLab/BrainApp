@@ -1,9 +1,9 @@
-package org.baderlab.csplugins.brain;
+package org.baderlab.csplugins.brainplugin;
 
 import org.biojava.bio.seq.ProteinTools;
 import org.biojava.bio.seq.Sequence;
 import org.biojava.bio.symbol.IllegalSymbolException;
-import org.baderlab.csplugins.brain.util.CRC64;
+import org.baderlab.csplugins.brainplugin.util.CRC64;
 
 import java.util.*;
 

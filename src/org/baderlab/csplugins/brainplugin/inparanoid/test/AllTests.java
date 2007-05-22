@@ -1,8 +1,8 @@
-package org.baderlab.csplugins.brain.inparanoid.test;
+package org.baderlab.csplugins.brainplugin.inparanoid.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import org.baderlab.csplugins.brain.inparanoid.InparanoidDB;
+import org.baderlab.csplugins.brainplugin.inparanoid.InparanoidDB;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center

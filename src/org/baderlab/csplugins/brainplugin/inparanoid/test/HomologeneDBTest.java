@@ -1,8 +1,8 @@
-package org.baderlab.csplugins.brain.inparanoid.test;
+package org.baderlab.csplugins.brainplugin.inparanoid.test;
 
 import junit.framework.TestCase;
 import org.biojava.bio.BioException;
-import org.baderlab.csplugins.brain.inparanoid.InparanoidDB;
+import org.baderlab.csplugins.brainplugin.inparanoid.InparanoidDB;
 
 import java.io.IOException;
 
