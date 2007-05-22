@@ -18,7 +18,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BRAIN.iws" afterPath="$PROJECT_DIR$/BRAIN.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BRAIN.iml" afterPath="$PROJECT_DIR$/BRAIN.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -89,21 +89,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/DomainInteractionAnalysis.java" line="438" class="org.baderlab.csplugins.brain.DomainInteractionAnalysis.ConservedHitAnalysisParams" package="org.baderlab.csplugins.brain">
-        <option name="ENABLED" value="true" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -174,115 +159,7 @@
     </subPane>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.6445652">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="BrainParameterChangeDialog.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/dialogs/BrainParameterChangeDialog.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="831" column="58" selection-start="36346" selection-end="36346" vertical-scroll-proportion="0.33175355">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BindingPeptideList.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BindingPeptideList.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="101" column="15" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.33175355">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DomainInteractionAnalysis.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/DomainInteractionAnalysis.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="57" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.02948403">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProteinDatabaseSearchTest.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/test/ProteinDatabaseSearchTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="87" column="59" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.028436018">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CytoscapeUtil.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/CytoscapeUtil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="308" column="9" selection-start="14307" selection-end="14307" vertical-scroll-proportion="0.02948403">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BrainParameterSet.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BrainParameterSet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="284" column="15" selection-start="10041" selection-end="10041" vertical-scroll-proportion="0.3744076">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PeptideToProfileReader.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/PeptideToProfileReader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="117" column="0" selection-start="5193" selection-end="5193" vertical-scroll-proportion="1.2322274">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProteinProfile.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/ProteinProfile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="81" column="44" selection-start="4240" selection-end="4240" vertical-scroll-proportion="0.028436018">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SequenceSearchResultSet.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/SequenceSearchResultSet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="479" column="0" selection-start="19415" selection-end="19415" vertical-scroll-proportion="0.028436018">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BrainAlgorithm.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BrainAlgorithm.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="129" column="45" selection-start="5072" selection-end="5072" vertical-scroll-proportion="0.02948403">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="BrainParameterChangeDialog.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/dialogs/BrainParameterChangeDialog.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="443" column="123" selection-start="22583" selection-end="22583" vertical-scroll-proportion="0.056872036">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -323,20 +200,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="BRAIN" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="BRAIN.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="BRAIN" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="org.baderlab.csplugins.brain" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -437,7 +300,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brain" />
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -464,56 +327,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brain" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brain/dialogs" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="BRAIN.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="BRAIN" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brain" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brain/actions" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -523,14 +336,14 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="0.6040428" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="0.9670886" version="1" splitterProportion="0.5">
       <flattenPackages ProjectPane="false" />
       <showMembers ProjectPane="true" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure PackagesPane="false" ProjectPane="true" Scope="false" Favorites="false" />
+      <showStructure Favorites="false" PackagesPane="false" Scope="false" ProjectPane="true" />
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
@@ -543,8 +356,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_flatWidth1" value="453" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_treeWidth1" value="453" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -573,18 +386,6 @@
   <component name="RecentsManager" />
   <component name="RestoreUpdateTree" />
   <component name="RunManager" selected="Application.brain">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="C:/IntelliJ-IDEA-3.0.5/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
     <configuration default="true" type="WebLogic Instance" factoryName="Local">
       <option name="WORKING_DIRECTORY" />
       <option name="HOST" value="localhost" />
@@ -601,18 +402,12 @@
       <predefined_log_file id="WEBLOGIC_DOMAIN_LOG_FILE" enabled="true" />
       <predefined_log_file id="WEBLOGIC_SERVER_LOG_FILE" enabled="true" />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <module name="" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
@@ -633,18 +428,36 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <module name="" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="C:/IntelliJ-IDEA-3.0.5/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="false" name="brain" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="cytoscape.CyMain" />
       <option name="VM_PARAMETERS" value="-Xmx1000M" />
       <option name="PROGRAM_PARAMETERS" value="-p $PROJECT_DIR$/build -p $PROJECT_DIR$/resources" />
-      <option name="WORKING_DIRECTORY" value="file:///Users/moyez/Code/wwdata/profiles_2007Feb21" />
+      <option name="WORKING_DIRECTORY" value="file:///Users/moyez/wwdata/profiles_2007Feb21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -798,18 +611,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1174" extended-state="6" />
+    <frame x="18" y="108" width="1301" height="1029" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.273909" order="8" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27360514" order="8" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3317757" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30040324" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24692678" order="0" x="1069" y="70" width="421" height="777" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43051118" order="0" x="1069" y="70" width="421" height="777" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17608286" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24371994" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30640668" order="9" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30640668" order="9" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921337" order="6" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33033708" order="10" />
@@ -819,7 +632,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24698237" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2501342" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18662953" order="4" x="32" y="369" width="1219" height="265" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44849786" order="4" x="32" y="369" width="1219" height="265" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919585" order="0" x="2063" y="48" width="490" height="890" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15134633" order="8" />
@@ -845,7 +658,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="New member 'proteinName' to hold the domain-containing protein name." />
+    <option name="LAST_COMMIT_MESSAGE" value="'brain' package renamed to 'brainplugin'" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -858,7 +671,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Comments added" />
     <MESSAGE value="Comments added; minor fixes" />
     <MESSAGE value="Version text changed" />
     <MESSAGE value="New 'Advanced Options' tab; node representation setting (domain or protein)" />
@@ -868,6 +680,7 @@
     <MESSAGE value="Add argument for whether nodes represent domains or proteins (set to false i.e. nodes=domains)" />
     <MESSAGE value="Set profile proteinName to the value of the Gene Name field in the peptide file. Removed obsolete method readPeptidesAsProfilesNewFormat." />
     <MESSAGE value="New member 'proteinName' to hold the domain-containing protein name." />
+    <MESSAGE value="'brain' package renamed to 'brainplugin'" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -922,108 +735,124 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/ui.jar!/apple/awt/CGlobalCursorManager.class">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/BrainAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.7468355">
+        <state line="29" column="61" selection-start="968" selection-end="968" vertical-scroll-proportion="0.34387353">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/WebLogoProteinStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BrainCurrentParameters.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/Ortholog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="13" selection-start="1805" selection-end="1805" vertical-scroll-proportion="1.0379747">
+        <state line="2" column="41" selection-start="97" selection-end="97" vertical-scroll-proportion="0.023369037">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/ProteinDatabaseSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/ProteinProfileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="40" selection-start="7270" selection-end="7270" vertical-scroll-proportion="-0.004746835">
+        <state line="3" column="41" selection-start="124" selection-end="124" vertical-scroll-proportion="0.035053555">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/ProteinDatabaseSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="41" selection-start="161" selection-end="161" vertical-scroll-proportion="0.046738073">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/AvgLinkHierarchicalClusteringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="41" selection-start="440" selection-end="440" vertical-scroll-proportion="0.10418695">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/actions/BrainAboutAction.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/SwingWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.6846986">
+        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/dialogs/BrainAboutDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/JMultiLineToolTip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="37" selection-start="2848" selection-end="2848" vertical-scroll-proportion="1.5450237">
+        <state line="58" column="6" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.6426485">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/DomainInteractionAnalysis.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/FileReaderUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="57" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.02948403">
+        <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.023369037">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/test/ProteinDatabaseSearchTest.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/CRC64.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="59" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.028436018">
+        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/CytoscapeUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/InparanoidDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="308" column="9" selection-start="14307" selection-end="14307" vertical-scroll-proportion="0.02948403">
-          <folding />
+        <state line="2" column="41" selection-start="97" selection-end="97" vertical-scroll-proportion="0.023369037">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/PeptideToProfileReader.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/BrainPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="5193" selection-end="5193" vertical-scroll-proportion="1.2322274">
-          <folding />
+        <state line="6" column="41" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0691334">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/ProteinProfile.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="44" selection-start="4240" selection-end="4240" vertical-scroll-proportion="0.028436018">
-          <folding />
+        <state line="8" column="41" selection-start="277" selection-end="277" vertical-scroll-proportion="0.09486166">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/SequenceSearchResultSet.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/HierarchicalClusteringBootstrapAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="479" column="0" selection-start="19415" selection-end="19415" vertical-scroll-proportion="0.028436018">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BrainAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="45" selection-start="5072" selection-end="5072" vertical-scroll-proportion="0.02948403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/dialogs/BrainParameterChangeDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="831" column="58" selection-start="36346" selection-end="36346" vertical-scroll-proportion="0.33175355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BindingPeptideList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="15" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.33175355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brain/BrainParameterSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="15" selection-start="10041" selection-end="10041" vertical-scroll-proportion="0.3744076">
-          <folding />
+        <state line="2" column="41" selection-start="86" selection-end="86" vertical-scroll-proportion="0.023369037">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
