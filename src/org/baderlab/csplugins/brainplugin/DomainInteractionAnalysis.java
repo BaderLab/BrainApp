@@ -7,7 +7,7 @@ import cytoscape.data.CyAttributes;
 import cytoscape.data.CyAttributesImpl;
 import org.biojava.bio.seq.Sequence;
 import org.baderlab.csplugins.brainplugin.inparanoid.InparanoidDB;
-import org.baderlab.brain.BrainAlgorithm;
+import org.baderlab.brain.*;
 
 import java.io.BufferedReader;
 import java.io.File;

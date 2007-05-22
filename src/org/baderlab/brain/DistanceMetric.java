@@ -1,6 +1,4 @@
-package org.baderlab.csplugins.brainplugin.inparanoid;
-
-import org.baderlab.brain.DatabaseReference;
+package org.baderlab.brain;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
@@ -33,33 +31,27 @@ import org.baderlab.brain.DatabaseReference;
  * * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  * *
  * * User: GaryBader
- * * Date: Jun 8, 2005
- * * Time: 7:08:03 PM
+ * * Date: Aug 4, 2005
+ * * Time: 9:11:52 PM
  */
 
 /**
- * A single homolog (ortholog + paralog) that is part of an Inparanoid ortholog cluster
+ * Class for calculation of a distance metric for hierarchical clustering
  */
-public class Ortholog {
-    private int clusterID;  //Inparanoid cluster ID
-    private int taxid;  //NCBI taxonomy ID
-    private DatabaseReference proteinID;
-
-    public Ortholog(int clusterID, int ncbiTaxID, DatabaseReference proteinID) {
-        this.clusterID = clusterID;
-        this.taxid = ncbiTaxID;
-        this.proteinID = proteinID;
-    }
-
-    public int getClusterID() {
-        return clusterID;
-    }
-
-    public int getTaxid() {
-        return taxid;
-    }
-
-    public DatabaseReference getProteinID() {
-        return proteinID;
+public class DistanceMetric {
+    /**
+     * Calculates the distance between two objects. If two objects are identical, the distance between
+     * them in any metric is zero.
+     *
+     * @param object1 Object1
+     * @param object2 Object2
+     * @return the distance between the objects
+     */
+    public double calc(Object object1, Object object2) {
+        //this is a basic method that must be overridden by a real distance method
+        if (object1.equals(object2)) {
+            return 0.0;
+        }
+        return 1.0;
     }
 }

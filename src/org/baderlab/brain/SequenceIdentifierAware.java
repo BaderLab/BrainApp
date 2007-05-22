@@ -1,12 +1,12 @@
-package org.baderlab.csplugins.brainplugin.inparanoid;
+package org.baderlab.brain;
 
-import org.baderlab.brain.DatabaseReference;
+import org.biojava.bio.seq.Sequence;
 
 /**
- * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
+ * Copyright (c) 2004 Memorial Sloan-Kettering Cancer Center
  * *
  * * Code written by: Gary Bader
- * * Authors: Gary Bader, Chris Sander
+ * * Authors: Gary Bader, Ethan Cerami, Chris Sander
  * *
  * * This library is free software; you can redistribute it and/or modify it
  * * under the terms of the GNU Lesser General Public License as published
@@ -33,33 +33,17 @@ import org.baderlab.brain.DatabaseReference;
  * * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  * *
  * * User: GaryBader
- * * Date: Jun 8, 2005
- * * Time: 7:08:03 PM
+ * * Date: Feb 6, 2005
+ * * Time: 3:38:16 PM
+ * * Description Implementing classes know how to extract an identifier from a sequence record
+ * * (e.g. could be in a FASTA description line in a database specific format)
  */
-
-/**
- * A single homolog (ortholog + paralog) that is part of an Inparanoid ortholog cluster
- */
-public class Ortholog {
-    private int clusterID;  //Inparanoid cluster ID
-    private int taxid;  //NCBI taxonomy ID
-    private DatabaseReference proteinID;
-
-    public Ortholog(int clusterID, int ncbiTaxID, DatabaseReference proteinID) {
-        this.clusterID = clusterID;
-        this.taxid = ncbiTaxID;
-        this.proteinID = proteinID;
-    }
-
-    public int getClusterID() {
-        return clusterID;
-    }
-
-    public int getTaxid() {
-        return taxid;
-    }
-
-    public DatabaseReference getProteinID() {
-        return proteinID;
-    }
+public interface SequenceIdentifierAware {
+    /**
+     * Gets the identifier of choice from a Sequence
+     *
+     * @param sequence The sequence containing the identifier
+     * @return the identifier
+     */
+    public String getIdentifier(Sequence sequence);
 }

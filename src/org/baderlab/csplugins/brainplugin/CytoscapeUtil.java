@@ -10,6 +10,7 @@ import org.biojava.bio.seq.Sequence;
 import org.mskcc.dataservices.bio.vocab.CommonVocab;
 import org.mskcc.dataservices.bio.vocab.InteractionVocab;
 import org.mskcc.dataservices.bio.vocab.InteractorVocab;
+import org.baderlab.brain.*;
 
 import java.util.*;
 

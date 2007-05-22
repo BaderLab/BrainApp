@@ -5,9 +5,9 @@ import org.biojava.bio.BioException;
 import org.biojava.bio.seq.Sequence;
 import org.biojava.bio.seq.SequenceIterator;
 import org.biojava.bio.seq.io.SeqIOTools;
-import org.baderlab.csplugins.brainplugin.AlignedProteinSequenceIdentityDistance;
-import org.baderlab.csplugins.brainplugin.AvgLinkHierarchicalClustering;
-import org.baderlab.csplugins.brainplugin.DistanceMatrix;
+import org.baderlab.brain.AlignedProteinSequenceIdentityDistance;
+import org.baderlab.brain.AvgLinkHierarchicalClustering;
+import org.baderlab.brain.DistanceMatrix;
 
 import java.io.BufferedReader;
 import java.io.File;

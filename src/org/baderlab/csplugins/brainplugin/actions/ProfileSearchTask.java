@@ -6,7 +6,7 @@ import cytoscape.CytoscapeInit;
 import cytoscape.task.Task;
 import cytoscape.task.TaskMonitor;
 import org.baderlab.csplugins.brainplugin.CytoscapeUtil;
-import org.baderlab.csplugins.brainplugin.MultiSequenceSearchResultSet;
+import org.baderlab.brain.MultiSequenceSearchResultSet;
 import org.baderlab.brain.BrainAlgorithm;
 
 /**

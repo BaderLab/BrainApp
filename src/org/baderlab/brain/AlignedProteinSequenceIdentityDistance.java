@@ -1,6 +1,4 @@
-package org.baderlab.csplugins.brainplugin.inparanoid;
-
-import org.baderlab.brain.DatabaseReference;
+package org.baderlab.brain;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
@@ -33,33 +31,36 @@ import org.baderlab.brain.DatabaseReference;
  * * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  * *
  * * User: GaryBader
- * * Date: Jun 8, 2005
- * * Time: 7:08:03 PM
+ * * Date: Aug 17, 2005
+ * * Time: 5:25:22 PM
  */
 
 /**
- * A single homolog (ortholog + paralog) that is part of an Inparanoid ortholog cluster
+ * Calculated the sequence identity as a distance metric (one minus % sequence identity)
  */
-public class Ortholog {
-    private int clusterID;  //Inparanoid cluster ID
-    private int taxid;  //NCBI taxonomy ID
-    private DatabaseReference proteinID;
+public class AlignedProteinSequenceIdentityDistance extends DistanceMetric {
+    public double calc(Object object1, Object object2) {
+        if ((!(object1 instanceof String)) || (!(object2 instanceof String))) {
+            throw new RuntimeException("Non string passed to AlignedProteinSequenceIdentityDistance");
+        }
 
-    public Ortholog(int clusterID, int ncbiTaxID, DatabaseReference proteinID) {
-        this.clusterID = clusterID;
-        this.taxid = ncbiTaxID;
-        this.proteinID = proteinID;
-    }
-
-    public int getClusterID() {
-        return clusterID;
-    }
-
-    public int getTaxid() {
-        return taxid;
-    }
-
-    public DatabaseReference getProteinID() {
-        return proteinID;
+        double distance = 0.0;
+        String sequenceA = (String) object1, sequenceB = (String) object2;
+        int count = 0;
+        int numGaps = 0;
+        for (int i = 0; i < sequenceA.length(); i++) {
+            String aaA = sequenceA.substring(i, i + 1);
+            String aaB = sequenceB.substring(i, i + 1);
+            if (aaA.equals("-") || (aaB.equals("-"))) {
+                numGaps++;
+                continue;
+            }
+            if (aaA.equals(aaB)) {
+                count++;
+            }
+        }
+        distance = ((double) count / (double) (sequenceA.length() - numGaps));
+        distance = 1.0 - distance; //convert from similarity to distance
+        return distance;
     }
 }

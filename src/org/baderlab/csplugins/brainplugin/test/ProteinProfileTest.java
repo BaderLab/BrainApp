@@ -1,7 +1,7 @@
 package org.baderlab.csplugins.brainplugin.test;
 
 import junit.framework.TestCase;
-import org.baderlab.csplugins.brainplugin.*;
+import org.baderlab.brain.*;
 
 import java.io.File;
 

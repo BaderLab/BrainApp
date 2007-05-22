@@ -1,6 +1,4 @@
-package org.baderlab.csplugins.brainplugin.inparanoid;
-
-import org.baderlab.brain.DatabaseReference;
+package org.baderlab.brain;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
@@ -33,33 +31,35 @@ import org.baderlab.brain.DatabaseReference;
  * * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  * *
  * * User: GaryBader
- * * Date: Jun 8, 2005
- * * Time: 7:08:03 PM
+ * * Date: Feb 20, 2006
+ * * Time: 7:23:44 PM
  */
 
 /**
- * A single homolog (ortholog + paralog) that is part of an Inparanoid ortholog cluster
+ * Defines a number of amino acid groupings
  */
-public class Ortholog {
-    private int clusterID;  //Inparanoid cluster ID
-    private int taxid;  //NCBI taxonomy ID
-    private DatabaseReference proteinID;
+public class AminoAcidGrouping {
 
-    public Ortholog(int clusterID, int ncbiTaxID, DatabaseReference proteinID) {
-        this.clusterID = clusterID;
-        this.taxid = ncbiTaxID;
-        this.proteinID = proteinID;
+    public static String[] getPositionSpecificPDZGrouping() {
+        String[] groupingByPosition = {
+                "ST, KRH, DEQN, FLAMPWIVCY, G", //position -3
+                "ST, KRH, DEQN, MPVCYFWLIA, G", //position -2 - ST, large hydrophobes, G
+                "ST, KRH, DEQN, FLAMPIVCY, G, W", //position -1 - W is separate because of backbone binding capability
+                "ST, KRH, DEQN, G, P, VAC, ILM, FWY" //position 0 - hydrophobe by size
+        };
+        return groupingByPosition;
     }
 
-    public int getClusterID() {
-        return clusterID;
+    public static String getHydroxylBasicAcidicpolarHydrophobeGrouping() {
+        return "ST, KRH, DEQN, FLAMPWIVCY, G";
     }
 
-    public int getTaxid() {
-        return taxid;
+    public static String getPolarChargedHydrophobeGrouping() {
+        return "STQN, KRH, DE, LAMIVFWY, C, P, G";
     }
 
-    public DatabaseReference getProteinID() {
-        return proteinID;
+    public static String getGroupingHydrophobeBySize() {
+        return "ST, KRH, DEQN, G, P, VAC, ILM, FWY";
     }
+
 }
