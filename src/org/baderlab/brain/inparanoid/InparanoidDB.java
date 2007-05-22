@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brainplugin.inparanoid;
+package org.baderlab.brain.inparanoid;
 
 import org.baderlab.brain.DatabaseReference;
 

@@ -1,6 +1,8 @@
-package org.baderlab.csplugins.brainplugin.inparanoid;
+package org.baderlab.brain.inparanoid.test;
 
-import org.baderlab.brain.DatabaseReference;
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import org.baderlab.brain.inparanoid.InparanoidDB;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
@@ -34,32 +36,32 @@ import org.baderlab.brain.DatabaseReference;
  * *
  * * User: GaryBader
  * * Date: Jun 8, 2005
- * * Time: 7:08:03 PM
+ * * Time: 8:59:38 PM
  */
 
 /**
- * A single homolog (ortholog + paralog) that is part of an Inparanoid ortholog cluster
+ * The main test suite for InparanoidDB
  */
-public class Ortholog {
-    private int clusterID;  //Inparanoid cluster ID
-    private int taxid;  //NCBI taxonomy ID
-    private DatabaseReference proteinID;
+public class AllTests {
 
-    public Ortholog(int clusterID, int ncbiTaxID, DatabaseReference proteinID) {
-        this.clusterID = clusterID;
-        this.taxid = ncbiTaxID;
-        this.proteinID = proteinID;
+    /**
+     * The main test suite for BRAIN
+     */
+    public static Test suite() {
+
+        TestSuite suite = new TestSuite();
+        suite.addTestSuite(InparanoidDB.class);
+        suite.setName("Homology Database Tests");
+
+        return suite;
     }
 
-    public int getClusterID() {
-        return clusterID;
-    }
-
-    public int getTaxid() {
-        return taxid;
-    }
-
-    public DatabaseReference getProteinID() {
-        return proteinID;
+    /**
+     * In case people want to run the tests from the command line
+     *
+     * @param args
+     */
+    public static void main(String args[]) {
+        junit.textui.TestRunner.run(suite());
     }
 }

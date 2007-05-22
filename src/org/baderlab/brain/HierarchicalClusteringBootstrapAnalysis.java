@@ -1,6 +1,6 @@
 package org.baderlab.brain;
 
-import org.baderlab.csplugins.brainplugin.util.FileReaderUtil;
+import org.baderlab.brain.util.FileReaderUtil;
 import org.baderlab.csplugins.brainplugin.PDZProteinLogoStyle;
 
 import java.awt.*;

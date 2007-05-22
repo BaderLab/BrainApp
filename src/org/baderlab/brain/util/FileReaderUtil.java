@@ -1,8 +1,10 @@
-package org.baderlab.csplugins.brainplugin.inparanoid.test;
+package org.baderlab.brain.util;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import org.baderlab.csplugins.brainplugin.inparanoid.InparanoidDB;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
@@ -35,33 +37,25 @@ import org.baderlab.csplugins.brainplugin.inparanoid.InparanoidDB;
  * * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  * *
  * * User: GaryBader
- * * Date: Jun 8, 2005
- * * Time: 8:59:38 PM
+ * * Date: Oct 28, 2005
+ * * Time: 2:14:45 PM
  */
-
-/**
- * The main test suite for InparanoidDB
- */
-public class AllTests {
-
+public class FileReaderUtil {
     /**
-     * The main test suite for BRAIN
-     */
-    public static Test suite() {
-
-        TestSuite suite = new TestSuite();
-        suite.addTestSuite(InparanoidDB.class);
-        suite.setName("Homology Database Tests");
-
-        return suite;
-    }
-
-    /**
-     * In case people want to run the tests from the command line
+     * Utility class to read a file as a list of lines in the file.
+     * Best for small files, otherwise you should use the BufferedReader directly
      *
-     * @param args
+     * @param inputFile The file to read from
+     * @return A list containing each line in the file as a separate list element
+     * @throws java.io.IOException If there is a problem reading the file.
      */
-    public static void main(String args[]) {
-        junit.textui.TestRunner.run(suite());
+    public static ArrayList readFileAsLineList(File inputFile) throws IOException {
+        ArrayList list = new ArrayList();
+        BufferedReader br = new BufferedReader(new FileReader(inputFile));
+        String fileLine = null;
+        while ((fileLine = br.readLine()) != null) {
+            list.add(fileLine);
+        }
+        return list;
     }
 }

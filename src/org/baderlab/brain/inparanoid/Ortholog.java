@@ -1,10 +1,6 @@
-package org.baderlab.csplugins.brainplugin.util;
+package org.baderlab.brain.inparanoid;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
+import org.baderlab.brain.DatabaseReference;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
@@ -37,25 +33,33 @@ import java.util.ArrayList;
  * * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
  * *
  * * User: GaryBader
- * * Date: Oct 28, 2005
- * * Time: 2:14:45 PM
+ * * Date: Jun 8, 2005
+ * * Time: 7:08:03 PM
  */
-public class FileReaderUtil {
-    /**
-     * Utility class to read a file as a list of lines in the file.
-     * Best for small files, otherwise you should use the BufferedReader directly
-     *
-     * @param inputFile The file to read from
-     * @return A list containing each line in the file as a separate list element
-     * @throws java.io.IOException If there is a problem reading the file.
-     */
-    public static ArrayList readFileAsLineList(File inputFile) throws IOException {
-        ArrayList list = new ArrayList();
-        BufferedReader br = new BufferedReader(new FileReader(inputFile));
-        String fileLine = null;
-        while ((fileLine = br.readLine()) != null) {
-            list.add(fileLine);
-        }
-        return list;
+
+/**
+ * A single homolog (ortholog + paralog) that is part of an Inparanoid ortholog cluster
+ */
+public class Ortholog {
+    private int clusterID;  //Inparanoid cluster ID
+    private int taxid;  //NCBI taxonomy ID
+    private DatabaseReference proteinID;
+
+    public Ortholog(int clusterID, int ncbiTaxID, DatabaseReference proteinID) {
+        this.clusterID = clusterID;
+        this.taxid = ncbiTaxID;
+        this.proteinID = proteinID;
+    }
+
+    public int getClusterID() {
+        return clusterID;
+    }
+
+    public int getTaxid() {
+        return taxid;
+    }
+
+    public DatabaseReference getProteinID() {
+        return proteinID;
     }
 }

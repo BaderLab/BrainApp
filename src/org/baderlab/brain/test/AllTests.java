@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brainplugin.test;
+package org.baderlab.brain.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brainplugin.util;
+package org.baderlab.brain.util;
 
 //Copied from http://www.codeguru.com/java/articles/122.shtml
 

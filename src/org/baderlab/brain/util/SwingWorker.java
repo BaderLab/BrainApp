@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brainplugin.util;
+package org.baderlab.brain.util;
 
 import javax.swing.*;
 

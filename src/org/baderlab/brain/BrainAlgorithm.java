@@ -9,7 +9,7 @@ import org.biojava.bio.BioException;
 import org.biojava.bio.seq.Sequence;
 import org.biojava.bio.seq.SequenceIterator;
 import org.biojava.bio.seq.io.SeqIOTools;
-import org.baderlab.csplugins.brainplugin.util.FileReaderUtil;
+import org.baderlab.brain.util.FileReaderUtil;
 import org.baderlab.csplugins.brainplugin.*;
 
 import javax.imageio.ImageIO;

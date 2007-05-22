@@ -5,7 +5,7 @@ import org.baderlab.brain.BrainCurrentParameters;
 import org.baderlab.brain.BrainParameterSet;
 import org.baderlab.brain.ProteinDatabaseSearchParams;
 import org.baderlab.brain.ProteinTerminus;
-import org.baderlab.csplugins.brainplugin.util.JMultiLineToolTip;
+import org.baderlab.brain.util.JMultiLineToolTip;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
