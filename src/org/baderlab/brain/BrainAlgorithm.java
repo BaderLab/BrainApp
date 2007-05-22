@@ -1,4 +1,4 @@
-package org.baderlab.csplugins.brainplugin;
+package org.baderlab.brain;
 
 import BiNGO.*;
 import cytoscape.CyNetwork;
@@ -10,6 +10,7 @@ import org.biojava.bio.seq.Sequence;
 import org.biojava.bio.seq.SequenceIterator;
 import org.biojava.bio.seq.io.SeqIOTools;
 import org.baderlab.csplugins.brainplugin.util.FileReaderUtil;
+import org.baderlab.csplugins.brainplugin.*;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

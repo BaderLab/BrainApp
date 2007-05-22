@@ -4,7 +4,7 @@ import cytoscape.Cytoscape;
 import cytoscape.task.ui.JTaskConfig;
 import cytoscape.task.util.TaskManager;
 import org.baderlab.csplugins.brainplugin.BrainParameterSet;
-import org.baderlab.csplugins.brainplugin.BrainAlgorithm;
+import org.baderlab.brain.BrainAlgorithm;
 import org.baderlab.csplugins.brainplugin.dialogs.BrainParameterChangeDialog;
 
 import javax.swing.*;

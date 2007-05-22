@@ -17,8 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BRAIN.iws" afterPath="$PROJECT_DIR$/BRAIN.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/BrainAlgorithm.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java" afterPath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/actions/ProfileSearchTask.java" afterPath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/actions/ProfileSearchTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/analyses/WWAnalysis.java" afterPath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/analyses/WWAnalysis.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/BrainAlgorithm.java" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -329,6 +332,10 @@
           <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/brain" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -383,7 +390,11 @@
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="true" />
   </component>
-  <component name="RecentsManager" />
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.baderlab.brain" />
+    </key>
+  </component>
   <component name="RestoreUpdateTree" />
   <component name="RunManager" selected="Application.brain">
     <configuration default="true" type="WebLogic Instance" factoryName="Local">
@@ -614,13 +625,13 @@
     <frame x="18" y="108" width="1301" height="1029" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27360514" order="8" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2725322" order="8" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3317757" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30040324" order="7" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43051118" order="0" x="1069" y="70" width="421" height="777" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17608286" order="1" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37124464" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24371994" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30640668" order="9" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921337" order="6" />
@@ -658,7 +669,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="'brain' package renamed to 'brainplugin'" />
+    <option name="LAST_COMMIT_MESSAGE" value="New package 'org.baderlab.brain' to contain BRAIN library" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -671,7 +682,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Comments added; minor fixes" />
     <MESSAGE value="Version text changed" />
     <MESSAGE value="New 'Advanced Options' tab; node representation setting (domain or protein)" />
     <MESSAGE value="Allow empty field value with no preceeding tab character in peptide file." />
@@ -681,6 +691,7 @@
     <MESSAGE value="Set profile proteinName to the value of the Gene Name field in the peptide file. Removed obsolete method readPeptidesAsProfilesNewFormat." />
     <MESSAGE value="New member 'proteinName' to hold the domain-containing protein name." />
     <MESSAGE value="'brain' package renamed to 'brainplugin'" />
+    <MESSAGE value="New package 'org.baderlab.brain' to contain BRAIN library" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -735,7 +746,7 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/BrainAlgorithm.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/BrainAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="61" selection-start="968" selection-end="968" vertical-scroll-proportion="0.34387353">
           <folding>

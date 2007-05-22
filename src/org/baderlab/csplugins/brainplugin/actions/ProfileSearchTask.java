@@ -7,7 +7,7 @@ import cytoscape.task.Task;
 import cytoscape.task.TaskMonitor;
 import org.baderlab.csplugins.brainplugin.CytoscapeUtil;
 import org.baderlab.csplugins.brainplugin.MultiSequenceSearchResultSet;
-import org.baderlab.csplugins.brainplugin.BrainAlgorithm;
+import org.baderlab.brain.BrainAlgorithm;
 
 /**
  * Copyright (c) 2005 Memorial Sloan-Kettering Cancer Center
