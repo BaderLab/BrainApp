@@ -17,42 +17,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/test/AllTests.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/test/AllTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/test" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/CRC64.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/dialogs/BrainParameterChangeDialog.java" afterPath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/dialogs/BrainParameterChangeDialog.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/AvgLinkHierarchicalClusteringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/Ortholog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/FileReaderUtil.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/test/ProteinProfileTest.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/test/ProteinProfileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/test/AvgLinkHierarchicalClusteringTest.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/test/AvgLinkHierarchicalClusteringTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/test/AllTests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/JMultiLineToolTip.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/AllTests.java" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/util" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/homologene/test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/homologene" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util/SwingWorker.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-dbcp-1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-collections-2.1.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BRAIN.iml" afterPath="$PROJECT_DIR$/BRAIN.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-pool-1.1.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BRAIN.iws" afterPath="$PROJECT_DIR$/BRAIN.iws" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/util" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/test/HomologeneDBTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/ProteinProfileTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/HierarchicalClusteringBootstrapAnalysis.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/HierarchicalClusteringBootstrapAnalysis.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test/ProteinDatabaseSearchTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/util/CRC64.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/util/CRC64.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/InparanoidDB.java" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/homologene" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/test" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/SequenceSearchResultSet.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/SequenceSearchResultSet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/BrainAlgorithm.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/BrainAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java" afterPath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/util/FileReaderUtil.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/util/FileReaderUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid/test" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/test/ProteinDatabaseSearchTest.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/test/ProteinDatabaseSearchTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/inparanoid" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/util/JMultiLineToolTip.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/util/JMultiLineToolTip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/baderlab/brain/util/SwingWorker.java" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/util/SwingWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/baderlab/brain/inparanoid" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-cli.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/mtj.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bytecode.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/BiNGO.jar" afterPath="" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -194,10 +167,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DomainInteractionAnalysis.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java">
+      <file leaf-file-name="CytoscapeUtil.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/CytoscapeUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="26" selection-start="262" selection-end="262" vertical-scroll-proportion="0.16695653">
+            <state line="15" column="14" selection-start="477" selection-end="477" vertical-scroll-proportion="0.29654035">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -376,7 +349,113 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/brain" />
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/dialogs" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BRAIN.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BRAIN" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/analyses" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiClass:WWAnalysis" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BRAIN.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BRAIN" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/actions" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BRAIN.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BRAIN" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:$PROJECT_DIR$/lib" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -666,18 +745,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="108" width="1301" height="1029" extended-state="0" />
+    <frame x="26" y="23" width="1744" height="1074" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40772533" order="8" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21801433" order="8" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3317757" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30040324" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3985623" order="0" x="1069" y="70" width="421" height="777" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37124464" order="1" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4495575" order="0" x="1069" y="70" width="421" height="777" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285568" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24371994" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.305794" order="9" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30501536" order="9" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921337" order="6" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33033708" order="10" />
@@ -687,7 +766,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24698237" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2501342" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27682403" order="4" x="32" y="369" width="1219" height="265" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2763562" order="4" x="32" y="369" width="1219" height="265" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919585" order="0" x="2063" y="48" width="490" height="890" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15134633" order="8" />
@@ -713,7 +792,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving BRAIN library code to org.baderlab.brain" />
+    <option name="LAST_COMMIT_MESSAGE" value="New dependency - BRAIN library" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -721,12 +800,11 @@
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ERROR_OCCURED" value="true" />
+    <option name="ERROR_OCCURED" value="false" />
     <option name="ACTIVE_VCS_NAME" value="svn" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="New 'Advanced Options' tab; node representation setting (domain or protein)" />
     <MESSAGE value="Allow empty field value with no preceeding tab character in peptide file." />
     <MESSAGE value="New boolean member 'uniqueQueryProteinNodes' - true if user sets nodes to represent proteins rather than domains" />
     <MESSAGE value="Draw nodes as proteins or as domains based on provided paramater. Affected node attributes change to list attributes." />
@@ -736,6 +814,7 @@
     <MESSAGE value="'brain' package renamed to 'brainplugin'" />
     <MESSAGE value="New package 'org.baderlab.brain' to contain BRAIN library" />
     <MESSAGE value="Moving BRAIN library code to org.baderlab.brain" />
+    <MESSAGE value="New dependency - BRAIN library" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -790,105 +869,55 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/BrainAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="61" selection-start="968" selection-end="968" vertical-scroll-proportion="0.34387353">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/WebLogoProteinStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/test/ProteinProfileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="124" selection-end="124" vertical-scroll-proportion="0.035053555">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/test/ProteinDatabaseSearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="161" selection-end="161" vertical-scroll-proportion="0.046738073">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/test/AvgLinkHierarchicalClusteringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="440" selection-end="440" vertical-scroll-proportion="0.10418695">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/test/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/BrainPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="41" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0691334">
+        <state line="53" column="13" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.16363636">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/HierarchicalClusteringBootstrapAnalysis.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/actions/BrainAboutAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="41" selection-start="86" selection-end="86" vertical-scroll-proportion="0.023369037">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/util/SwingWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="547" selection-end="547" vertical-scroll-proportion="-1.528363">
+        <state line="47" column="13" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.6861538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/util/JMultiLineToolTip.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/actions/BrainRunAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="6" selection-start="1178" selection-end="1178" vertical-scroll-proportion="1.069692">
+        <state line="32" column="27" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.42461538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/util/FileReaderUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/actions/ProfileSearchTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.51377636">
+        <state line="51" column="23" selection-start="2120" selection-end="2131" vertical-scroll-proportion="0.3246154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/baderlab/brain/util/CRC64.java">
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/PDZProteinLogoStyle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1951" selection-end="1951" vertical-scroll-proportion="-0.28363046">
+        <state line="33" column="63" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.3">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/DomainInteractionAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="262" selection-end="262" vertical-scroll-proportion="0.16695653">
+        <state line="55" column="13" selection-start="2127" selection-end="2127" vertical-scroll-proportion="1.0393701">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/baderlab/csplugins/brainplugin/CytoscapeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="14" selection-start="477" selection-end="477" vertical-scroll-proportion="0.29654035">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
